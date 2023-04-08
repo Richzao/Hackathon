@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #c598c5 0%, #fcfcfc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+
+.container {
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.header h2 {
+  color: #bd15cc46;
+}
+
+.form {
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
+.form-control textarea {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control i.fa-circle-info {
+  visibility: visible;
+  right: 10px;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+button.jogos {
+  background: linear-gradient(90deg, #c598c5 0%, #fcfcfc 100%);
+  border: 2px solid #c598c5;
+  color: #000000;
+  font-size: 14px;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  transition: 0.7s all ease;
+}
+
+button.jogos:hover {
+  color: #ffffff;
+  background: #c598c5;
+}
+
+button.enviar {
+  background: linear-gradient(90deg, #c598c5 0%, #fcfcfc 100%);
+  border: 2px solid #c598c5;
+  color: #000000;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  transition: 0.7s all ease;
+}
+
+.form input[type="file"] {
+  display: none;
+}
+.form label.ev {
+  padding: 20px 10px;
+  width: 200px;
+  background-color: #0037ad;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
+.form button:hover {
+  color: #ffffff;
+  background: #c598c5;
+}
+
+.mensagem {
+  display: none;
+  position: absolute;
+  top: -100%; /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  height: 20px;
+  border: 1px solid red;
+}
+/* Erro e Sucesso */
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.success textarea {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error textarea {
+  border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+label.estudos {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="checkbox"] + span:before {
+  border-radius: 13px;
+  content: "\2714";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+input[type="checkbox"]:checked + span:before {
+  content: "\2714";
+  background-color: #c598c5;
+  color: #fff;
+  border-color: #c001c0;
+}
+
+input[type="checkbox"] + span {
+  display: inline-block;
+  margin-left: 30px;
+}
+input[type="checkbox"] + span,
+input[type="checkbox"] + span:before {
+  vertical-align: middle;
+}
+
+label span {
+  display: none;
+}
+
+label.OBS {
+  align-items: center;
+  color: #000000;
+}
+
+select {
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  appearance: none;
+  border: none;
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+}

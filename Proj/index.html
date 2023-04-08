@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>4.community</title>
+  </head>
+  <body>
+    <div class="mensagem">Informação</div>
+    <div class="container">
+      <div class="header">
+        <h2>Encontre a comunidade ideal para você!</h2>
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="sexo">Gênero:</label>
+            <br />
+            <br />
+            <label class="masculino" for="Masculino">
+              <input
+                type="checkbox"
+                name="sexo"
+                value="Masculino"
+                id="sexo"
+                placeholder="Informe seu sexo"
+              />
+              <span>Masculino</span>
+            </label>
+            <br />
+
+            <label class="feminino" for="Feminino">
+              <input
+                type="checkbox"
+                name="sexo"
+                value="Feminino"
+                id="sexo"
+                placeholder="Informe seu sexo"
+              />
+              <span>Feminino</span>
+            </label>
+            <br />
+
+            <label class="outros" for="Outros">
+              <input
+                type="checkbox"
+                name="sexo"
+                value="Outros"
+                id="sexo"
+                placeholder="Informe seu sexo"
+              />
+              <span>Outros</span>
+            </label>
+
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="idade">Nos informe sua idade.</label>
+            <br />
+            <select id="idade">
+              <option value="none" hidden></option>
+              <option value="18">+18</option>
+              <option value="17">-18</option>
+            </select>
+            <br />
+          </div>
+
+          <div class="form-control">
+            <label for="cidade">Informe a cidade em que você reside.</label>
+
+            <input type="text" id="cidade" />
+
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="Hobbies">Quais são seus hobbies?</label>
+            <br />
+
+            <button
+              onclick="mostrarJogos()"
+              type="submit"
+              class="jogos"
+              id="jogos"
+              value="1"
+            >
+              Jogos
+            </button>
+            <div id="opcoesJogos" hidden>
+              <label title="First-Person-shooter" for="jogos">
+                <input type="checkbox" name="fps" value="fps" id="jogos" />
+                <span>FPS</span>
+              </label>
+              <br />
+              <label title="Multiplayer Online Battle Arena" for="jogos">
+                <input type="checkbox" name="MOBA" value="MOBA" id="jogos" />
+                <span>MOBA</span>
+              </label>
+              <br />
+              <label title="Role-Playing Game" for="jogos">
+                <input type="checkbox" name="rpg" value="rpg" id="jogos" />
+                <span>RPG</span>
+              </label>
+              <br />
+              <label title="Simulação" for="jogos">
+                <input type="checkbox" name="sm" value="sm" id="jogos" />
+                <span>Simulação</span>
+              </label>
+              <br />
+              <label title="Battle Royale" for="jogos">
+                <input type="checkbox" name="br" value="br" id="jogos" />
+                <span>BR</span>
+              </label>
+              <br />
+              <label title="" for="jogos">
+                <input type="checkbox" name="es" value="es" id="jogos" />
+                <span>Esportes</span>
+              </label>
+              <br />
+              <label title="" for="jogos">
+                <input type="checkbox" name="av" value="av" id="jogos" />
+                <span>Aventura</span>
+              </label>
+              <br />
+              <label title="" for="jogos">
+                <input type="checkbox" name="pt" value="pt" id="jogos" />
+                <span>Plataforma</span>
+              </label>
+              <br />
+            </div>
+            <button
+              onclick="mostrarEsportes()"
+              type="submit"
+              class="jogos"
+              id="esporte"
+              value="2"
+            >
+              Esportes
+            </button>
+            <div id="opcoesEsportes" hidden>
+              <label title="" for="esportes">
+                <input type="checkbox" name="fut" value="fut" id="esportes" />
+                <span>Futebol</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="bsk" value="bsk" id="esportes" />
+                <span>Basquete</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="hd" value="hd" id="esportes" />
+                <span>Handebol</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="vl" value="vl" id="esportes" />
+                <span>Vôlei</span>
+              </label>
+              <br />
+              <label title="Artes Marciais" for="esportes">
+                <input type="checkbox" name="am" value="am" id="esportes" />
+                <span>A.M.</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="nt" value="nt" id="esportes" />
+                <span>Natação</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="tn" value="tn" id="esportes" />
+                <span>Tênis</span>
+              </label>
+              <br />
+              <label title="" for="esportes">
+                <input type="checkbox" name="skt" value="skt" id="esportes" />
+                <span>Skate</span>
+              </label>
+            </div>
+            <button
+              onclick="mostrarLeitura()"
+              type="submit"
+              class="jogos"
+              id="leitura"
+              value="3"
+            >
+              Leitura
+            </button>
+            <div id="opcoesLeitura" hidden>
+              <label title="" for="leitura">
+                <input type="checkbox" name="fc" value="fc" id="leitura" />
+                <span>Ficção</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="fcc" value="fcc" id="leitura" />
+                <span>Ficção-Científica</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="fh" value="fh" id="leitura" />
+                <span>Fatos históricos</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="fs" value="fs" id="leitura" />
+                <span>Fantasia</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="rm" value="rm" id="leitura" />
+                <span>Romance</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="av" value="av" id="leitura" />
+                <span>Aventura</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="sus" value="sus" id="leitura" />
+                <span>Suspense</span>
+              </label>
+              <br />
+              <label title="" for="leitura">
+                <input type="checkbox" name="tr" value="tr" id="leitura" />
+                <span>Terror</span>
+              </label>
+              <br />
+            </div>
+
+            <button
+              onclick="mostrarLazer()"
+              type="submit"
+              class="jogos"
+              id="lazer"
+              value="7"
+            >
+              Lazer
+            </button>
+            <div id="opcoesLazer" hidden>
+              <label title="" for="lazer">
+                <input type="checkbox" name="ac" value="ac" id="lazer" />
+                <span>Acampar</span>
+              </label>
+              <br />
+
+              <label title="" for="lazer">
+                <input
+                  type="checkbox"
+                  name="trilhas"
+                  value="trilhas"
+                  id="lazer"
+                />
+                <span>Fazer trilhas</span>
+              </label>
+              <br />
+
+              <label title="" for="lazer">
+                <input type="checkbox" name="pc" value="pc" id="lazer" />
+                <span>Pescar</span>
+              </label>
+              <br />
+            </div>
+            <br />
+            <br />
+            <button
+              onclick="mostrarCulinaria()"
+              type="submit"
+              class="jogos"
+              id="culinária"
+              value="4"
+            >
+              Culinária
+            </button>
+            <div id="opcoesCulinaria" hidden>
+              <label title="" for="culinaria">
+                <input type="checkbox" name="it" value="it" id="culinaria" />
+                <span>Italiana</span>
+              </label>
+              <br />
+
+              <label title="" for="culinaria">
+                <input type="checkbox" name="mex" value="mex" id="culinaria" />
+                <span>Mexicana</span>
+              </label>
+              <br />
+
+              <label title="" for="culinaria">
+                <input type="checkbox" name="jp" value="jp" id="culinaria" />
+                <span>Japonesa</span>
+              </label>
+              <br />
+              <label title="" for="culinaria">
+                <input type="checkbox" name="ch" value="ch" id="culinaria" />
+                <span>Chinesa</span>
+              </label>
+              <br />
+              <label title="" for="culinaria">
+                <input type="checkbox" name="fr" value="fr" id="culinaria" />
+                <span>Francesa</span>
+              </label>
+              <br />
+              <label title="" for="culinaria">
+                <input type="checkbox" name="bra" value="bra" id="culinaria" />
+                <span>Brasileira</span>
+              </label>
+              <br />
+
+              <label title="" for="culinaria">
+                <input type="checkbox" name="arb" value="arb" id="culinaria" />
+                <span>Árabe</span>
+              </label>
+              <br />
+            </div>
+            <button
+              onclick="mostrarEstudar()"
+              type="submit"
+              class="jogos"
+              id="estudar"
+              value="5"
+            >
+              Estudar
+            </button>
+            <div id="opcoesEstudar" hidden>
+              <label
+                title="Ciências Sociais: Esta área inclui disciplinas como sociologia, psicologia, antropologia, economia e ciência política, que se concentram no estudo do comportamento humano, sociedade e cultura."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="cs1" value="cs1" id="estudos1" />
+                <span>C.S</span>
+              </label>
+              <br />
+              <label
+                title="Esta área envolve o estudo de computadores, programas de computador, software, hardware e tecnologia da informação em geral."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="ti1" value="ti1" id="estudos1" />
+                <span>T.I.</span>
+              </label>
+              <br />
+              <label
+                title="Medicina: Esta área de estudo envolve a compreensão da anatomia humana, doenças, diagnósticos, tratamentos e prevenção de doenças."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="med1" value="med1" id="estudos1" />
+                <span>MD.</span>
+              </label>
+              <br />
+              <label
+                title="Engenharia envolve a aplicação de princípios matemáticos, científicos e técnicos para projetar, construir e manter estruturas, máquinas e sistemas."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="eng1" value="eng1" id="estudos1" />
+                <span>Eng.</span>
+              </label>
+              <br />
+              <label
+                title="Negócios e Administração: Esta área de estudo concentra-se em princípios de administração, marketing, finanças e contabilidade em organizações e empresas.
+              "
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="na1" value="na1" id="estudos1" />
+                <span>N.A.</span>
+              </label>
+              <br />
+              <label
+                title="Direito: O estudo do direito envolve a compreensão de regulamentos e leis, bem como a aplicação desses princípios para resolver disputas."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="dir1" value="dir1" id="estudos1" />
+                <span>Dir.</span>
+              </label>
+              <br />
+              <label
+                title="Artes e Humanidades: Esta área de estudo inclui disciplinas como literatura, história, filosofia, arte e música, que se concentram no estudo da cultura e do pensamento humano."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="ah1" value="ah1" id="estudos1" />
+                <span>A.H.</span>
+              </label>
+              <br />
+              <label
+                title="Biologia - estuda a vida e os organismos vivos, incluindo células, genética, evolução, ecologia e outras áreas relacionadas."
+                class="estudos"
+                for="estudos"
+              >
+                <input type="checkbox" name="bio1" value="bio1" id="estudos1" />
+                <span>Bio.</span>
+              </label>
+            </div>
+
+            <button
+              onclick="mostrarTurismo()"
+              type="submit"
+              class="jogos"
+              id="turismo"
+              value="6"
+            >
+              Turismo
+            </button>
+            <div id="opcoesTurismo" hidden>
+              <label title="" for="turismo">
+                <input type="checkbox" name="erp" value="erp" id="turismo" />
+                <span>Europa</span>
+              </label>
+              <br />
+
+              <label title="" for="turismo">
+                <input type="checkbox" name="ocn" value="ocn" id="turismo" />
+                <span>Oceania</span>
+              </label>
+              <br />
+
+              <label title="" for="turismo">
+                <input type="checkbox" name="asia" value="asia" id="turismo" />
+                <span>Ásia</span>
+              </label>
+              <br />
+
+              <label title="" for="turismo">
+                <input type="checkbox" name="afr" value="afr" id="turismo" />
+                <span>África</span>
+              </label>
+              <br />
+
+              <label title="" for="turismo">
+                <input type="checkbox" name="ams" value="ams" id="turismo" />
+                <span>América do Sul</span>
+              </label>
+              <br />
+              <label title="" for="turismo">
+                <input type="checkbox" name="amc" value="amc" id="turismo" />
+                <span>América Central</span>
+              </label>
+              <br />
+              <label title="" for="turismo">
+                <input type="checkbox" name="amn" value="amn" id="turismo" />
+                <span>América do Norte</span>
+              </label>
+              <br />
+            </div>
+            <button
+              onclick="mostrarTV()"
+              type="submit"
+              class="jogos"
+              id="tv"
+              value="8"
+            >
+              Filmes/Séries
+            </button>
+
+            <div id="opcoesTV" hidden>
+              <label title="" for="tv">
+                <input type="checkbox" name="fcc2" value="fcc2" id="tv" />
+                <span>Ficção-Científica</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="rmc" value="rmc" id="tv" />
+                <span>Romance</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="av2" value="av2" id="tv" />
+                <span>Aventura</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="trr" value="trr" id="tv" />
+                <span>Terror</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="doc" value="doc" id="tv" />
+                <span>Documentário</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="aa" value="aa" id="tv" />
+                <span>Animação/Anime</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="acao" value="acao" id="tv" />
+                <span>Ação</span>
+              </label>
+              <br />
+
+              <label title="" for="tv">
+                <input type="checkbox" name="cm" value="cm" id="tv" />
+                <span>Comédia</span>
+              </label>
+              <br />
+            </div>
+
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="estudos"
+              >Quais área de estudos te despertam interesse?
+            </label>
+            <br />
+            <br />
+            <label
+              title="Ciências Sociais: Esta área inclui disciplinas como sociologia, psicologia, antropologia, economia e ciência política, que se concentram no estudo do comportamento humano, sociedade e cultura."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="cs" value="cs" id="estudos" />
+              <span>C.S</span>
+            </label>
+            <label
+              title="Esta área envolve o estudo de computadores, programas de computador, software, hardware e tecnologia da informação em geral."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="ti" value="ti" id="estudos" />
+              <span>T.I.</span>
+            </label>
+            <br />
+            <label
+              title="Medicina: Esta área de estudo envolve a compreensão da anatomia humana, doenças, diagnósticos, tratamentos e prevenção de doenças."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="med" value="med" id="estudos" />
+              <span>MD.</span>
+            </label>
+            <label
+              title="Engenharia envolve a aplicação de princípios matemáticos, científicos e técnicos para projetar, construir e manter estruturas, máquinas e sistemas."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="eng" value="eng" id="estudos" />
+              <span>Eng.</span>
+            </label>
+            <br />
+            <label
+              title="Negócios e Administração: Esta área de estudo concentra-se em princípios de administração, marketing, finanças e contabilidade em organizações e empresas.
+              "
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="na" value="na" id="estudos" />
+              <span>N.A.</span>
+            </label>
+
+            <label
+              title="Direito: O estudo do direito envolve a compreensão de regulamentos e leis, bem como a aplicação desses princípios para resolver disputas."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="dir" value="dir" id="estudos" />
+              <span>Dir.</span>
+            </label>
+            <br />
+            <label
+              title="Artes e Humanidades: Esta área de estudo inclui disciplinas como literatura, história, filosofia, arte e música, que se concentram no estudo da cultura e do pensamento humano."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="ah" value="ah" id="estudos" />
+              <span>A.H.</span>
+            </label>
+
+            <label
+              title="Biologia - estuda a vida e os organismos vivos, incluindo células, genética, evolução, ecologia e outras áreas relacionadas."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="bio" value="bio" id="estudos" />
+              <span>Bio.</span>
+            </label>
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="trabalho">Qual sua área de trabalho? </label>
+
+            <br />
+            <br />
+            <label
+              title="Marketing e Publicidade: profissionais de marketing e publicidade trabalham em campanhas publicitárias, estratégias de marketing, branding, pesquisa de mercado, entre outros."
+              class="estudos"
+              for="estudos"
+            >
+              <input type="checkbox" name="mp" value="mp" id="trabalho" />
+              <span>M.P.</span>
+            </label>
+            <label
+              title="Tecnologia da Informação: profissionais de TI trabalham em empresas de software, hardware, redes, segurança da informação, desenvolvimento de aplicativos, entre outros."
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="ti" value="ti" id="trabalho" />
+              <span>T.I.</span>
+            </label>
+            <br />
+            <label
+              title=" Saúde: profissionais da área da saúde incluem médicos, enfermeiros, fisioterapeutas, psicólogos, nutricionistas, entre outros."
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="med" value="med" id="trabalho" />
+              <span>S.A.</span>
+            </label>
+            <label
+              title="Engenharia: engenheiros trabalham em projetos de construção, manufatura, automação industrial, eletrônica, entre outros."
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="eng" value="eng" id="trabalho" />
+              <span>Eng.</span>
+            </label>
+            <br />
+            <label
+              title="Educação: professores e educadores trabalham em escolas, universidades, instituições de ensino à distância e empresas de treinamento.
+              "
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="ed" value="ed" id="trabalho" />
+              <span>E.D.</span>
+            </label>
+            <label
+              title="Direito: advogados e profissionais jurídicos trabalham em escritórios de advocacia, tribunais, empresas e organizações governamentais.
+              "
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="dir" value="dir" id="trabalho" />
+              <span>Dir.</span>
+            </label>
+            <br />
+            <label
+              title="Artes e Entretenimento: profissionais das artes e entretenimento incluem artistas, músicos, atores, diretores de cinema e televisão, roteiristas, produtores, entre outros. Eles trabalham em estúdios de gravação, produções de filmes e televisão, teatros, casas de ópera, galerias de arte e outras organizações artísticas."
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="ah" value="ah" id="trabalho" />
+              <span>A.H.</span>
+            </label>
+            <label
+              title="Finanças: profissionais de finanças trabalham em bancos, corretoras, empresas de investimento, planejamento financeiro, contabilidade, entre outros."
+              class="trabalho"
+              for="trabalho"
+            >
+              <input type="checkbox" name="fin" value="fin" id="trabalho" />
+              <span>Fin.</span>
+            </label>
+
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+          <div class="form-control">
+            <label for="Aditivos">
+              Qual outra área você possui interesse mas não encontrou nada a
+              respeito?</label
+            >
+            <textarea
+              id="aditivos"
+              name="aditivos"
+              rows="5"
+              cols="30"
+            ></textarea
+            ><i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <button class="enviar" type="submit">
+            Enviar informações para conclusão do cadastro
+          </button>
+          <br />
+          <br />
+          <label class="OBS" for="info">
+            &#x1F600; Quanto mais informações você compartilhar conosco, melhor
+            será sua experiência! &#x1F600;
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function mostrarJogos() {
+        document.getElementById("opcoesJogos").removeAttribute("hidden");
+      }
+      function mostrarEsportes() {
+        document.getElementById("opcoesEsportes").removeAttribute("hidden");
+      }
+      function mostrarLeitura() {
+        document.getElementById("opcoesLeitura").removeAttribute("hidden");
+      }
+      function mostrarLazer() {
+        document.getElementById("opcoesLazer").removeAttribute("hidden");
+      }
+      function mostrarCulinaria() {
+        document.getElementById("opcoesCulinaria").removeAttribute("hidden");
+      }
+      function mostrarEstudar() {
+        document.getElementById("opcoesEstudar").removeAttribute("hidden");
+      }
+      function mostrarTurismo() {
+        document.getElementById("opcoesTurismo").removeAttribute("hidden");
+      }
+      function mostrarTV() {
+        document.getElementById("opcoesTV").removeAttribute("hidden");
+      }
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/63ccb1e397.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/docx@5.0.2/build/index.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script src="./scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.31.3/docxtemplater.js"></script>
+    <script src="https://unpkg.com/pizzip@3.1.1/dist/pizzip.js"></script>
+    <script src="https://unpkg.com/pizzip@3.1.1/dist/pizzip-utils.js"></script>
+  </body>
+</html>
